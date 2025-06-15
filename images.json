@@ -1,41 +1,26 @@
-[
-  "Golden retriever wearing a high-tech delivery vest with LED lights and GPS collar, carrying a sleek thermal food container, walking confidently down a busy city sidewalk at sunset, photorealistic, urban environment",
-
-  "Futuristic automated dog training facility with multiple robotic stations, dogs learning to navigate obstacle courses, holographic displays showing training progress, clean modern architecture, wide shot",
-
-  "German shepherd at a customer's front door with a smart delivery container attached to its back, customer using smartphone app to unlock the container, suburban neighborhood, warm lighting, lifestyle photography",
-
-  "Network diagram visualization showing interconnected dog delivery hubs across a city map, with animated dog icons moving between locations, clean infographic style, blue and orange color scheme",
-
-  "Border collie wearing weatherproof delivery gear in light rain, carrying a glowing thermal container, navigating through a park shortcut at dusk, cinematic lighting, motion blur background",
-
-  "High-tech dog delivery hub interior with solar panels, automated feeding stations, multiple dogs resting in climate-controlled areas, LED status displays, modern industrial design",
-
-  "Split screen comparison: left side shows expensive human delivery driver with scooter in traffic, right side shows efficient dog delivery through pedestrian areas, cost savings visualization overlay",
-
-  "Labrador retriever approaching a pizza restaurant pickup window, wearing professional delivery vest with restaurant branding, friendly staff member placing order in secure container, daytime",
-
-  "Aerial view of city with multiple dogs simultaneously delivering food along different routes, GPS tracking lines visible, efficient network visualization, drone photography style",
-
-  "Customer opening their front door to find a friendly husky with a delivery container, expressing delight and surprise, smartphone in hand showing delivery app notification, warm natural lighting",
-
-  "Robot trainer working with a young dog, teaching package handling skills, automated treat dispenser, modern training facility background, clean technology aesthetic",
-
-  "Cross-section view of smart delivery container showing temperature control, GPS tracking, security locks, RFID sensors, technical diagram style with callout labels",
-
-  "Montage of different dog breeds (various sizes) all wearing matching delivery vests, standing proudly in formation, diverse urban background, professional team photo style",
-
-  "Nighttime delivery scene with dog wearing reflective safety gear and LED collar, thermal container glowing softly, safe navigation through well-lit city streets",
-
-  "Mobile app interface mockup showing dog delivery tracking in real-time, map with dog location, estimated delivery time, customer rating system, clean UI design",
-
-  "Comparison infographic showing traditional delivery costs vs dog delivery savings, charts and graphs, professional business presentation style, green colors for savings",
-
-  "Australian cattle dog navigating a busy crosswalk, following traffic signals, carrying delivery container, urban commuters in background, street photography style",
-
-  "Automated hub management system with multiple screens showing dog locations, delivery statistics, weather monitoring, control room environment, high-tech operations center",
-
-  "Dog delivery team meeting at central hub, various breeds wearing matching vests, preparing for daily deliveries, team coordination, morning briefing atmosphere",
-
-  "Customer testimonial scene with happy family receiving food delivery from friendly golden retriever, children excited to see the dog, suburban home setting, lifestyle photography"
-]
+{
+  "hero-dog.png": {
+    "prompt": "Professional photo of a golden retriever wearing a high-tech delivery harness with LED lights and GPS collar, carrying a thermal food delivery bag, standing confidently on a city sidewalk with modern buildings in background, cinematic lighting, ultra-realistic",
+    "size": "1536x1024"
+  },
+  "app-mockup.png": {
+    "prompt": "Modern smartphone mockup showing a sleek delivery app interface with a map tracking a dog's delivery route, clean UI design with purple and blue gradients, order status showing 'Rex is on his way!'",
+    "size": "1024x1536"
+  },
+  "dog-team.jpg": {
+    "prompt": "Group photo of 5 different dog breeds (golden retriever, border collie, german shepherd, husky, labrador) all wearing matching high-tech delivery gear, sitting in formation at a modern automated hub station with solar panels and charging stations",
+    "size": "1536x1024"
+  },
+  "thermal-container.jpg": {
+    "prompt": "Close-up product shot of a sleek, lightweight thermal delivery container with RFID lock, LED temperature display, and aerodynamic design, sitting on white background with soft shadows",
+    "size": "1024x1024"
+  },
+  "customer-happy.jpg": {
+    "prompt": "Happy family (parents and two kids) receiving food delivery from a friendly golden retriever at their front door, the dog is wagging its tail, warm evening lighting, suburban home setting",
+    "size": "1536x1024"
+  },
+  "city-map.jpg": {
+    "prompt": "Aerial view of city district with animated delivery routes shown as glowing blue lines connecting restaurants to homes, multiple dog icons moving along the routes, high-tech visualization overlay",
+    "size": "1536x1024"
+  }
+}
