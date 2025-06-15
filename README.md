@@ -150,5 +150,3 @@ Here's a table of land animals that could potentially be used for autonomous del
 - Need return journey provisions (food, water)
 - More vulnerable to theft/interference
 - Require more complex training for autonomous operation
-
-**Modern Reality**: While theoretically possible, GPS-enabled drones and robots have largely made biological land-based delivery systems obsolete, except in very specific circumstances where technology might fail or be unavailable.
