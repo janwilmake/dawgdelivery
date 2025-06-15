@@ -153,6 +153,8 @@ Here's a table of land animals that could potentially be used for autonomous del
 
 # Robot-Assisted Dog Training for Delivery
 
+![](3.png)
+
 Yes, robots could significantly reduce the human resources needed for training delivery dogs! Here's how:
 
 ## Current Training Bottlenecks
@@ -453,3 +455,6 @@ Restaurant → Hub → Dog Assignment:
 The economics are compelling, the technology exists, and dogs have the proven capability to navigate cities safely. The main barriers are regulatory approval and public acceptance - but the cost savings are so dramatic that cities would have strong incentives to approve pilot programs.
 
 **Timeline to reality: 3-5 years** for first major city deployments, assuming regulatory approval and successful pilot programs.
+
+![](1.png)
+![](2.png)
