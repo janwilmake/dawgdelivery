@@ -113,3 +113,42 @@ Unlike medieval times, we now have:
 - **Emergency backup systems**
 
 **Result**: A resilient, eco-friendly, and surprisingly fast local delivery network that operates parallel to traditional shipping!
+
+# Pigeon land alternatives
+
+Here's a table of land animals that could potentially be used for autonomous delivery, similar to how carrier pigeons were used:
+
+| Animal                         | Avg Speed | Max Distance | Max Carry Weight              | Homing Ability          | Trainability | Terrain Adaptability        | Cost/Maintenance |
+| ------------------------------ | --------- | ------------ | ----------------------------- | ----------------------- | ------------ | --------------------------- | ---------------- |
+| **Domestic Dog**               | 15-25 mph | 50-100 miles | 10-25% body weight (5-15 lbs) | Excellent with training | Exceptional  | High - various terrains     | Moderate         |
+| **Sled Dog (Husky)**           | 10-20 mph | 100+ miles   | 20-40 lbs                     | Excellent               | Excellent    | High - cold/snow specialist | Moderate-High    |
+| **Carrier Pigeon** (reference) | 35-50 mph | 600+ miles   | 2.5 oz                        | Exceptional (innate)    | Good         | Moderate                    | Low              |
+| **Horse**                      | 25-30 mph | 25-50 miles  | 200-300 lbs                   | Good with training      | Good         | High - most terrains        | High             |
+| **Donkey/Mule**                | 8-15 mph  | 20-30 miles  | 100-200 lbs                   | Good                    | Good         | Excellent - rough terrain   | Moderate         |
+| **Reindeer**                   | 20-25 mph | 40-60 miles  | 100-150 lbs                   | Good                    | Moderate     | Excellent - arctic/tundra   | High             |
+| **Camel**                      | 8-25 mph  | 100+ miles   | 200-400 lbs                   | Excellent               | Moderate     | Excellent - desert/arid     | High             |
+| **Llama/Alpaca**               | 10-15 mph | 15-25 miles  | 75-100 lbs                    | Good                    | Good         | Good - mountainous          | Moderate         |
+| **Trained Rat**                | 6-8 mph   | 1-5 miles    | 0.5-1 lb                      | Good with training      | Excellent    | High - urban environments   | Low              |
+
+**Key Observations:**
+
+**Most Practical Options:**
+
+- **Domestic Dogs**: Best balance of speed, carrying capacity, trainability, and homing ability
+- **Sled Dogs**: Superior for long distances and harsh conditions
+
+**Best for Specific Scenarios:**
+
+- **Urban/Short Range**: Trained rats (small packages, navigate tight spaces)
+- **Desert**: Camels (extreme distances, heavy loads)
+- **Mountainous**: Llamas (sure-footed, moderate loads)
+
+**Limitations Compared to Pigeons:**
+
+- Much higher maintenance costs
+- Slower speeds (except horses)
+- Need return journey provisions (food, water)
+- More vulnerable to theft/interference
+- Require more complex training for autonomous operation
+
+**Modern Reality**: While theoretically possible, GPS-enabled drones and robots have largely made biological land-based delivery systems obsolete, except in very specific circumstances where technology might fail or be unavailable.
