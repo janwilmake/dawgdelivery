@@ -1,8 +1,10 @@
-name = "pigeon-delivery"
+name = "dawgdelivery"
 compatibility_date = "2025-06-10"
 dev.port = 3000
 routes = [
-  { pattern = "pigeon.wilmake.com", custom_domain = true }
+  { pattern = "dawgdelivery.wilmake.com", custom_domain = true },
+    { pattern = "dawgdelivery.com", custom_domain = true },
+        { pattern = "www.dawgdelivery.com", custom_domain = true }
 ]
 assets.directory = "./"
 

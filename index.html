@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DawgDelivery - The Future of Food Delivery</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Dawg Delivery - Revolutionary Pet-Powered Food Delivery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,9 +14,10 @@
         }
 
         body {
-            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: #333;
+            overflow-x: hidden;
         }
 
         .container {
@@ -27,11 +28,11 @@
 
         /* Header */
         header {
+            position: fixed;
+            top: 0;
+            width: 100%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
             z-index: 1000;
             padding: 1rem 0;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
@@ -45,7 +46,7 @@
 
         .logo {
             font-size: 2rem;
-            font-weight: 800;
+            font-weight: 700;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -62,7 +63,7 @@
             text-decoration: none;
             color: #333;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
@@ -72,14 +73,13 @@
         .cta-button {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 12px 24px;
+            padding: 0.75rem 1.5rem;
             border: none;
-            border-radius: 25px;
+            border-radius: 50px;
             font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
             text-decoration: none;
-            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
 
         .cta-button:hover {
@@ -89,10 +89,11 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
+            margin-top: 80px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             position: relative;
             overflow: hidden;
         }
@@ -104,57 +105,99 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('hero-dog.png') center/cover;
-            opacity: 0.1;
-            z-index: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
         }
 
         .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
-        .hero h1 {
+        .hero-text h1 {
             font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
+            font-weight: 700;
             line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .hero p {
-            font-size: 1.3rem;
+        .hero-text p {
+            font-size: 1.25rem;
+            color: #666;
             margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            line-height: 1.6;
         }
 
-        .hero-stats {
+        .hero-buttons {
             display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 3rem;
+            gap: 1rem;
         }
 
-        .stat {
+        .secondary-button {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .secondary-button:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .hero-image {
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            transform: perspective(1000px) rotateY(-5deg);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
             text-align: center;
         }
 
-        .stat-number {
+        .stat-item h3 {
             font-size: 2.5rem;
-            font-weight: 800;
-            display: block;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
         }
 
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
+        .stat-item p {
+            color: #666;
+            font-weight: 500;
         }
 
         /* Features Section */
         .features {
-            padding: 80px 0;
+            padding: 6rem 0;
             background: #f8fafc;
         }
 
@@ -163,16 +206,16 @@
             margin-bottom: 4rem;
         }
 
-        .section-title {
+        .section-header h2 {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: #2d3748;
+            color: #333;
         }
 
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: #718096;
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
             max-width: 600px;
             margin: 0 auto;
         }
@@ -180,89 +223,52 @@
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 3rem;
         }
 
         .feature-card {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
         .feature-icon {
-            font-size: 3rem;
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        .feature-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #2d3748;
-        }
-
-        .feature-description {
-            color: #718096;
-            line-height: 1.6;
-        }
-
-        /* How It Works */
-        .how-it-works {
-            padding: 80px 0;
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .step {
-            text-align: center;
-            position: relative;
-        }
-
-        .step-number {
             width: 60px;
             height: 60px;
-            border-radius: 50%;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: 0 auto 1.5rem;
             font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 1rem;
         }
 
-        .step-title {
-            font-size: 1.2rem;
+        .feature-card h3 {
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #2d3748;
+            margin-bottom: 1rem;
+            color: #333;
         }
 
-        .step-description {
-            color: #718096;
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
         }
 
         /* App Section */
         .app-section {
+            padding: 6rem 0;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 80px 0;
         }
 
         .app-content {
@@ -275,7 +281,7 @@
         .app-text h2 {
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .app-text p {
@@ -284,27 +290,28 @@
             opacity: 0.9;
         }
 
-        .app-stores {
+        .app-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .app-features li {
+            padding: 0.5rem 0;
             display: flex;
+            align-items: center;
             gap: 1rem;
         }
 
-        .app-store-btn {
+        .app-features li::before {
+            content: "✓";
             background: rgba(255, 255, 255, 0.2);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 12px;
-            text-decoration: none;
-            transition: all 0.3s;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-        }
-
-        .app-store-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
+            justify-content: center;
+            font-weight: bold;
         }
 
         .app-mockup {
@@ -314,39 +321,37 @@
         .app-mockup img {
             max-width: 300px;
             height: auto;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
         }
 
-        /* Stats Section */
-        .stats-section {
-            padding: 80px 0;
-            background: #2d3748;
-            color: white;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
+        /* CTA Section */
+        .final-cta {
+            padding: 6rem 0;
+            background: white;
             text-align: center;
         }
 
-        .stat-item h3 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            color: #667eea;
+        .final-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #333;
         }
 
-        .stat-item p {
+        .final-cta p {
             font-size: 1.1rem;
-            opacity: 0.8;
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Footer */
         footer {
-            background: #1a202c;
+            background: #1a1a1a;
             color: white;
-            padding: 60px 0 30px;
+            padding: 3rem 0 1rem;
         }
 
         .footer-content {
@@ -360,57 +365,73 @@
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            color: #667eea;
         }
 
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section ul li a {
-            color: #cbd5e0;
+        .footer-section a {
+            color: #ccc;
             text-decoration: none;
-            transition: color 0.3s;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
         }
 
-        .footer-section ul li a:hover {
+        .footer-section a:hover {
             color: #667eea;
         }
 
         .footer-bottom {
-            border-top: 1px solid #2d3748;
-            padding-top: 2rem;
+            border-top: 1px solid #333;
+            padding-top: 1rem;
             text-align: center;
-            color: #718096;
+            color: #999;
         }
 
-        /* Responsive */
+        /* Responsive Design */
         @media (max-width: 768px) {
+
+            .hero-content,
+            .app-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
             .nav-links {
                 display: none;
             }
 
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-stats {
+            .hero-buttons {
                 flex-direction: column;
                 gap: 1rem;
             }
 
-            .app-content {
+            .features-grid {
                 grid-template-columns: 1fr;
-                text-align: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
 
-            .app-stores {
-                justify-content: center;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
+        }
+
+        .hero-text {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-image {
+            animation: fadeInUp 1s ease-out 0.2s both;
         }
     </style>
 </head>
@@ -419,14 +440,14 @@
     <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo">🐕 DawgDelivery</div>
+            <div class="logo">🐕 Dawg Delivery</div>
             <ul class="nav-links">
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#app">App</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="#" class="cta-button">Download App</a>
+            <a href="#download" class="cta-button">Get Started</a>
         </nav>
     </header>
 
@@ -434,24 +455,41 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Food Delivery.<br>Reimagined.</h1>
-                <p>Get your favorite meals delivered by our trained, GPS-equipped dogs. Faster, eco-friendly, and 85%
-                    cheaper than traditional delivery.</p>
-                <a href="#" class="cta-button" style="font-size: 1.1rem; padding: 15px 30px;">Order Now</a>
+                <div class="hero-text">
+                    <h1>The Future of Food Delivery is Here</h1>
+                    <p>Meet our four-legged delivery heroes! Get your favorite meals delivered by our specially trained,
+                        GPS-equipped dogs. Faster, eco-friendly, and tail-waggingly awesome.</p>
+                    <div class="hero-buttons">
+                        <a href="#download" class="cta-button">Order Now</a>
+                        <a href="#how-it-works" class="secondary-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="hero-dog.png" alt="Professional delivery dog with high-tech harness">
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">12min</span>
-                        <span class="stat-label">Average Delivery Time</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Delivery Dogs</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">98%</span>
-                        <span class="stat-label">Success Rate</span>
-                    </div>
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>15min</h3>
+                    <p>Average Delivery Time</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.8%</h3>
+                    <p>Successful Deliveries</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Trained Delivery Dogs</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50k+</h3>
+                    <p>Happy Customers</p>
                 </div>
             </div>
         </div>
@@ -461,139 +499,112 @@
     <section class="features" id="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Why Choose DawgDelivery?</h2>
-                <p class="section-subtitle">Our revolutionary dog-powered delivery network combines cutting-edge
-                    technology with the reliability and speed of man's best friend.</p>
+                <h2>Why Choose Dawg Delivery?</h2>
+                <p>Our revolutionary pet-powered delivery system combines cutting-edge technology with the reliability
+                    and charm of man's best friend.</p>
             </div>
-
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">Lightning Fast</h3>
-                    <p class="feature-description">No traffic jams, no parking issues. Our dogs take the most direct
-                        route using sidewalks, parks, and shortcuts.</p>
+                    <h3>Lightning Fast</h3>
+                    <p>Our dogs navigate through shortcuts and avoid traffic, delivering your food 40% faster than
+                        traditional methods.</p>
                 </div>
-
                 <div class="feature-card">
                     <div class="feature-icon">🌱</div>
-                    <h3 class="feature-title">Eco-Friendly</h3>
-                    <p class="feature-description">Zero emissions delivery with a carbon pawprint that's 90% smaller
-                        than vehicle-based delivery.</p>
+                    <h3>Eco-Friendly</h3>
+                    <p>Zero emissions, just pure paw power! Help reduce your carbon footprint while getting delicious
+                        food delivered.</p>
                 </div>
-
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Ultra Secure</h3>
+                    <p>GPS tracking, locked thermal containers, and trained security protocols ensure your food arrives
+                        safe and sound.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💝</div>
+                    <h3>Heartwarming Experience</h3>
+                    <p>Every delivery comes with a smile (and maybe a tail wag). Our dogs are trained to brighten your
+                        day!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌡️</div>
+                    <h3>Temperature Perfect</h3>
+                    <p>Advanced thermal containers keep hot food hot and cold food cold during the entire journey.</p>
+                </div>
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
-                    <h3 class="feature-title">Real-Time Tracking</h3>
-                    <p class="feature-description">GPS-enabled collars let you track your delivery dog in real-time. Get
-                        updates every step of the way.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3 class="feature-title">Secure Containers</h3>
-                    <p class="feature-description">Temperature-controlled, RFID-locked containers keep your food fresh
-                        and secure until delivery.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3 class="feature-title">Lower Costs</h3>
-                    <p class="feature-description">85% cheaper operating costs mean lower delivery fees for you and
-                        better pay for our dog handlers.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🏥</div>
-                    <h3 class="feature-title">Trained & Insured</h3>
-                    <p class="feature-description">All our dogs are professionally trained, health-monitored, and fully
-                        insured for your peace of mind.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">How It Works</h2>
-                <p class="section-subtitle">Getting your food delivered by our amazing dogs is as easy as 1-2-3</p>
-            </div>
-
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title">Place Your Order</h3>
-                    <p class="step-description">Order from your favorite restaurants through our app. Select
-                        "DawgDelivery" for faster, cheaper delivery.</p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3 class="step-title">Dog Gets Dispatched</h3>
-                    <p class="step-description">Our AI assigns the nearest available dog. You'll get their name, photo,
-                        and estimated arrival time.</p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Track & Receive</h3>
-                    <p class="step-description">Watch your delivery dog's journey in real-time. Unlock the container
-                        with your phone when they arrive!</p>
+                    <h3>Real-Time Tracking</h3>
+                    <p>Watch your furry delivery hero's journey in real-time through our advanced mobile app.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- App Section -->
-    <section class="app-section">
+    <section class="app-section" id="app">
         <div class="container">
             <div class="app-content">
                 <div class="app-text">
-                    <h2>Download the DawgDelivery App</h2>
-                    <p>Track your delivery dog in real-time, unlock your food container, and even send treats to your
-                        delivery pup. Available now on iOS and Android.</p>
-
-                    <div class="app-stores">
-                        <a href="#" class="app-store-btn">
-                            <i class="fab fa-apple"></i>
-                            <span>App Store</span>
-                        </a>
-                        <a href="#" class="app-store-btn">
-                            <i class="fab fa-google-play"></i>
-                            <span>Google Play</span>
-                        </a>
-                    </div>
+                    <h2>Track Your Delivery Hero</h2>
+                    <p>Our state-of-the-art mobile app lets you follow every step of your delivery journey. From
+                        restaurant pickup to your doorstep, you'll know exactly where your food (and your furry delivery
+                        friend) is at all times.</p>
+                    <ul class="app-features">
+                        <li>Real-time GPS tracking</li>
+                        <li>Dog profile and photos</li>
+                        <li>Delivery time estimates</li>
+                        <li>Direct communication with handlers</li>
+                        <li>Rate your delivery experience</li>
+                        <li>Schedule recurring deliveries</li>
+                    </ul>
+                    <a href="#download" class="cta-button">Download App</a>
                 </div>
-
                 <div class="app-mockup">
-                    <img src="app-mockup.png" alt="DawgDelivery App Screenshot">
+                    <img src="app-mockup.png" alt="Dawg Delivery mobile app interface">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
+    <!-- How It Works -->
+    <section class="features" id="how-it-works">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>50,000+</h3>
-                    <p>Successful Deliveries</p>
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Getting your food delivered by our four-legged heroes is as easy as 1-2-3!</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">1</div>
+                    <h3>Place Your Order</h3>
+                    <p>Use our app to order from your favorite local restaurants. Choose "Dawg Delivery" at checkout.
+                    </p>
                 </div>
-                <div class="stat-item">
-                    <h3>12min</h3>
-                    <p>Average Delivery Time</p>
+                <div class="feature-card">
+                    <div class="feature-icon">2</div>
+                    <h3>Meet Your Hero</h3>
+                    <p>Get notified when your assigned delivery dog picks up your order. Track their journey in
+                        real-time!</p>
                 </div>
-                <div class="stat-item">
-                    <h3>500+</h3>
-                    <p>Delivery Dogs</p>
-                </div>
-                <div class="stat-item">
-                    <h3>15</h3>
-                    <p>Cities Served</p>
+                <div class="feature-card">
+                    <div class="feature-icon">3</div>
+                    <h3>Enjoy Your Meal</h3>
+                    <p>Your furry delivery hero arrives with your perfectly preserved meal. Unlock the container with
+                        your app!</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="download">
+        <div class="container">
+            <h2>Ready for a Pawsome Delivery Experience?</h2>
+            <p>Join thousands of satisfied customers who've discovered the joy of dog-powered food delivery. Download
+                our app today and experience the future of food delivery!</p>
+            <a href="#" class="cta-button">Download Dawg Delivery App</a>
         </div>
     </section>
 
@@ -602,86 +613,37 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
+                    <h3>🐕 Dawg Delivery</h3>
+                    <p>Revolutionizing food delivery with the power of man's best friend. Fast, eco-friendly, and filled
+                        with love.</p>
                 </div>
-
                 <div class="footer-section">
-                    <h3>For Partners</h3>
-                    <ul>
-                        <li><a href="#">Restaurant Partners</a></li>
-                        <li><a href="#">Become a Dog Handler</a></li>
-                        <li><a href="#">Hub Locations</a></li>
-                        <li><a href="#">API Documentation</a></li>
-                    </ul>
+                    <h3>Quick Links</h3>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#features">Features</a>
+                    <a href="#app">Mobile App</a>
+                    <a href="#careers">Careers</a>
                 </div>
-
                 <div class="footer-section">
                     <h3>Support</h3>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Safety</a></li>
-                        <li><a href="#">Dog Welfare</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
+                    <a href="#help">Help Center</a>
+                    <a href="#safety">Safety Info</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#feedback">Feedback</a>
                 </div>
-
                 <div class="footer-section">
-                    <h3>Follow Our Dogs</h3>
-                    <ul>
-                        <li><a href="#"><i class="fab fa-instagram"></i> @dawgdelivery</a></li>
-                        <li><a href="#"><i class="fab fa-tiktok"></i> @dawgdelivery</a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i> @dawgdelivery</a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i> DawgDelivery</a></li>
-                    </ul>
+                    <h3>For Restaurants</h3>
+                    <a href="#partner">Become a Partner</a>
+                    <a href="#restaurant-app">Restaurant App</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#support">Business Support</a>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2024 DawgDelivery Inc. All rights reserved. | Privacy Policy | Terms of Service</p>
+                <p>&copy; 2024 Dawg Delivery. All rights reserved. | Privacy Policy | Terms of Service</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Simple scroll animation for stats
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.feature-card, .step').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        // Mobile menu toggle (basic implementation)
-        document.addEventListener('DOMContentLoaded', function () {
-            const header = document.querySelector('header');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    header.style.background = 'rgba(255, 255, 255, 0.98)';
-                } else {
-                    header.style.background = 'rgba(255, 255, 255, 0.95)';
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
